@@ -16,7 +16,6 @@ const HeaderCartButton = ({ onClick }) => {
   const btnClasses = `${classes.button} ${btnIsHilighted ? classes.bump : ""}`;
   const { items } = cartCtx;
   useEffect(() => {
-    console.log("ddddddddddddd");
     if (cartCtx.items.length === 0) {
       return;
     }
