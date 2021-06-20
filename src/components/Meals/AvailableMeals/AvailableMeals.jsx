@@ -3,11 +3,11 @@ import React, { useState, useEffect } from "react";
 import classes from "./AvailableMeals.module.css";
 import Card from "./../../UI/Card/Card";
 import MealItem from "./../MealItem/MealItem";
-import urls from "../../../urls";
+import { mealsEndpoint } from "../../../urls";
 
 const AvailableMeals = () => {
   useEffect(() => {
-    fetch(urls.url)
+    fetch(mealsEndpoint)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
